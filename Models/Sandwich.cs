@@ -37,7 +37,7 @@ namespace Microsoft.Bot.Sample.FormBot
     [Serializable]
     public class SandwichOrder
     {
-        public Options?a opcion;
+        public Options? Opcion;
         public SandwichOptions? Sandwich;
         public LengthOptions? Length;
         public BreadOptions? Bread;
