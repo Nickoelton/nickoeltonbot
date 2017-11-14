@@ -11,8 +11,8 @@ namespace SimpleEchoBot.Models
     [Serializable]
     public class Card : IDialog
     {
-        const string HeroCard = "Hero Card";
-        const string TumblaidCard = "Tumblaid Card";
+        const string HeroCard = "Web Hero Card";
+        const string TumblaidCard = "Mini Web Tumblaid Card";
         public async Task StartAsync(IDialogContext context)
         {
             context.Wait(MensajeRecibido);
@@ -56,9 +56,9 @@ namespace SimpleEchoBot.Models
         {
             var hercoCard = new HeroCard
             {
-                Title = "Tarjeta URL",
-                Subtitle = "mi tarjeta",
-                Text = "",
+                Title = "Nickoelton",
+                Subtitle = "Mi página web",
+                Text = "Aqui podrás encontrar un One Slide sobre mi y como contactarme.",
                 Images = new List<CardImage> { new CardImage("http://www.nickoelton.com/images/background.jpg") },
                 Buttons = new List<CardAction> { new CardAction(ActionTypes.OpenUrl, "Ir a mi web", value: "http://www.nickoelton.com") }
             };
@@ -71,7 +71,7 @@ namespace SimpleEchoBot.Models
             {
                 Title = "Tarjeta URL",
                 Subtitle = "mi tarjeta",
-                Text = "",
+                Text = "esta es version mini xd",
                 Images = new List<CardImage> { new CardImage("http://www.nickoelton.com/images/background.jpg") },
                 Buttons = new List<CardAction> { new CardAction(ActionTypes.PostBack, "opcion", value: "opcion") }
             };

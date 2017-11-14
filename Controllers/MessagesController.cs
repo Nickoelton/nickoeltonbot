@@ -19,7 +19,7 @@ namespace SimpleEchoBot
             if (activity.Type == ActivityTypes.Message)
             {
                 // aqui controlamos con que dialogo se iniciará
-                await Conversation.SendAsync(activity, () => new Models.botones());
+                await Conversation.SendAsync(activity, () => new Models.Card());
             }
             else
             {

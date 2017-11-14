@@ -141,7 +141,6 @@
     <Compile Include="Models\Dialogo.cs" />
     <Compile Include="Models\RootDialog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\eltonbot.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
