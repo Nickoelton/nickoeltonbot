@@ -16,7 +16,7 @@ namespace Microsoft.Bot.Sample.FormBot
     };
     public enum Familia
     {
-        Mamá, Papá, Herman@s
+        Mamá, Papá, Hermanos
     };
 
     [Serializable]
