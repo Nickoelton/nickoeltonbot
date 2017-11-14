@@ -40,7 +40,7 @@ namespace Microsoft.Bot.Sample.FormBot
                     case ActivityTypes.Typing:
                     case ActivityTypes.DeleteUserData:
                     default:
-                        Trace.TraceError($"Unknown activity type ignored: {activity.GetActivityType()}");
+                        Trace.TraceError($"Tipo de actividad desconocida ignorado: {activity.GetActivityType()}");
                         break;
                 }
             }
