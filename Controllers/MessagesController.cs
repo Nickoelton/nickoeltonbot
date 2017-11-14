@@ -26,10 +26,9 @@ namespace Microsoft.Bot.Sample.FormBot
         [ResponseType(typeof(void))]
         public virtual async Task<HttpResponseMessage> Post([FromBody] Activity activity)
         {
-            if (message.Type == "Message")
+            if (activity.Type == "Message")
             {
-                var reply = message.CreateReplyMessage($"You sent Message? xD");
-                return reply;
+                var reply = activity.CreateReply($"You sent Message? xD");
             }
 
             if (activity != null)
