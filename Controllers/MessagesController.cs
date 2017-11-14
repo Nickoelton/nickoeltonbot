@@ -44,21 +44,6 @@ namespace Microsoft.Bot.Sample.FormBot
                         break;
                 }
             }
-            return new HttpResponseMessage(System.Net.HttpStatusCode.Accepted);
-
-            var reply = activity.CreateReply("Tengo colores en mente, pero necesito tu ayuda para elegir el mejor.");
-            reply.Type = ActivityTypes.Message;
-            reply.TextFormat = TextFormatTypes.Plain;
-
-            reply.SuggestedActions = new SuggestedActions()
-            {
-                    Actions = new List<CardAction>()
-                {
-                    new CardAction(){ Title = "Blue", Type=ActionTypes.ImBack, Value="Blue" },
-                    new CardAction(){ Title = "Red", Type=ActionTypes.ImBack, Value="Red" },
-                    new CardAction(){ Title = "Green", Type=ActionTypes.ImBack, Value="Green" }
-                }
-            };
         }
     }
 }
