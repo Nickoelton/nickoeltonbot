@@ -16,13 +16,12 @@ namespace Microsoft.Bot.Sample.FormBot
         Mamá, Papá, Hermanos
     };
 
-
-
     [Serializable]
     public class SandwichOrder
     {
         public Options? Opcion;
         public Familia? Familia;
+
 
         public static IForm<SandwichOrder> BuildForm()
         {

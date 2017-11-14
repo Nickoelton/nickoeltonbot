@@ -44,6 +44,7 @@ namespace Microsoft.Bot.Sample.FormBot
                         break;
                 }
             }
+            return new HttpResponseMessage(System.Net.HttpStatusCode.Accepted);
         }
     }
 }
