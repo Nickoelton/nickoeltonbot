@@ -48,7 +48,7 @@ namespace Microsoft.Bot.Sample.FormBot
         public static IForm<SandwichOrder> BuildForm()
         {
             return new FormBuilder<SandwichOrder>()
-                    .Message("Bienvenido a la orden de sándwich simple bot!")
+                    .Message("Hola, no estoy en este momento pero mi nickoeltonbot te ayudara ;) !")
                     .Build();
         }
     };
