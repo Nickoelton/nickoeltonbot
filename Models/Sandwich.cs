@@ -9,6 +9,11 @@ using System.Collections.Generic;
 // in a conversation.
 namespace Microsoft.Bot.Sample.FormBot
 {
+
+    public enum Options
+    {
+        Cumpleaños, Familia, Amigos
+    }
     public enum SandwichOptions
     {
         BLT, BlackForestHam, BuffaloChicken, ChickenAndBaconRanchMelt, ColdCutCombo, MeatballMarinara,
@@ -32,6 +37,7 @@ namespace Microsoft.Bot.Sample.FormBot
     [Serializable]
     public class SandwichOrder
     {
+        public Options?a opcion;
         public SandwichOptions? Sandwich;
         public LengthOptions? Length;
         public BreadOptions? Bread;
@@ -42,7 +48,7 @@ namespace Microsoft.Bot.Sample.FormBot
         public static IForm<SandwichOrder> BuildForm()
         {
             return new FormBuilder<SandwichOrder>()
-                    .Message("Welcome to the simple sandwich order bot!")
+                    .Message("Bienvenido a la orden de sándwich simple bot!")
                     .Build();
         }
     };
