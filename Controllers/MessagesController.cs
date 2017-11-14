@@ -1,4 +1,4 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Web.Http;
 
 using Microsoft.Bot.Connector;
@@ -26,6 +26,12 @@ namespace Microsoft.Bot.Sample.FormBot
         [ResponseType(typeof(void))]
         public virtual async Task<HttpResponseMessage> Post([FromBody] Activity activity)
         {
+            if (message.Type == "Message")
+            {
+                var reply = message.CreateReplyMessage($"You sent Message? xD");
+                return reply;
+            }
+
             if (activity != null)
             {
                 // one of these will have an interface and process it
